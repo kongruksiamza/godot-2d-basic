@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://c56vsdu1462sw"]
+
+[ext_resource type="Script" path="res://Scripts/game_ui.gd" id="1_ev0tm"]
+[ext_resource type="FontFile" uid="uid://cxeomee38c60c" path="res://Font/ProtestStrike-Regular.ttf" id="1_isyky"]
+[ext_resource type="FontFile" uid="uid://dh4pupjy2sf6a" path="res://Font/K2D-Bold.ttf" id="3_dl18q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d8b01"]
+font = ExtResource("1_isyky")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_ka2kp"]
+font = ExtResource("3_dl18q")
+font_size = 35
+
+[node name="GAME_UI" type="CanvasLayer"]
+script = ExtResource("1_ev0tm")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "0"
+label_settings = SubResource("LabelSettings_d8b01")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -11.5
+offset_right = 49.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "My Game 2D"
+label_settings = SubResource("LabelSettings_ka2kp")
+
+[node name="StartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = 50.0
+offset_right = 48.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="StatusTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="StatusTimer" to="." method="_on_status_timer_timeout"]
