@@ -1,6 +1,10 @@
 ## 🚀 วิธีดาวน์โหลดไฟล์ Asset 
 ![image](https://github.com/kongruksiamza/godot-2d-basic/blob/main/how%20to%20download.png)
 
+## 🚀 Guideline & Documents
+- แนวทางการเรียนรู้การพัฒนาเกม (Game Development) [อ่านบทความ](https://github.com/kongruksiamza/game-guideline)
+- เอกสารสอนเขียนโปรแกรมฟรี (.pdf) [ดาวน์โหลด](https://github.com/kongruksiamza/ebook-for-education)
+
 ## 📢 ติดตามข่าวสารอื่นๆของเราได้ที่
 <div id="badges">
   <a href="https://www.facebook.com/KongRuksiamTutorial" target="_blank">
